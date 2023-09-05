@@ -70,6 +70,17 @@
                                                                                                                        }
                                                                                         }
                                                                         },
+                                                     "Serilog.Expressions/3.4.1":  {
+                                                                                       "dependencies":  {
+                                                                                                            "Serilog":  "2.12.0"
+                                                                                                        },
+                                                                                       "runtime":  {
+                                                                                                       "lib/net5.0/Serilog.Expressions.dll":  {
+                                                                                                                                                  "assemblyVersion":  "3.4.1.0",
+                                                                                                                                                  "fileVersion":  "3.4.1.0"
+                                                                                                                                              }
+                                                                                                   }
+                                                                                   },
                                                      "Serilog.Formatting.Compact/1.1.0":  {
                                                                                               "dependencies":  {
                                                                                                                    "Serilog":  "2.12.0"
@@ -95,6 +106,7 @@
                                                      "Serilog.Sinks.KineticSeqPlugIn/1.0.0":  {
                                                                                                   "dependencies":  {
                                                                                                                        "Microsoft.AspNetCore.Hosting.Abstractions":  "2.2.0",
+                                                                                                                       "Serilog.Expressions":  "3.4.1",
                                                                                                                        "Serilog.Sinks.Seq":  "5.2.2"
                                                                                                                    },
                                                                                                   "runtime":  {
@@ -218,6 +230,13 @@
                                              "path":  "serilog/2.12.0",
                                              "hashPath":  "serilog.2.12.0.nupkg.sha512"
                                          },
+                      "Serilog.Expressions/3.4.1":  {
+                                                        "type":  "package",
+                                                        "serviceable":  true,
+                                                        "sha512":  "sha512-0gcR+7/0g4WYQlbxWWuTNYdUkrwHdnD60it4kY9yX3Djm1DFcrHRO6gynYaxPb8vcPFuGRZwpA2mowCFRm6MYg==",
+                                                        "path":  "serilog.expressions/3.4.1",
+                                                        "hashPath":  "serilog.expressions.3.4.1.nupkg.sha512"
+                                                    },
                       "Serilog.Formatting.Compact/1.1.0":  {
                                                                "type":  "package",
                                                                "serviceable":  true,
@@ -235,7 +254,7 @@
                       "Serilog.Sinks.KineticSeqPlugIn/1.0.0":  {
                                                                    "type":  "package",
                                                                    "serviceable":  true,
-                                                                   "sha512":  "sha512-vwwh5rF6Vs10QTZo1IaMvPW7/0j4SB0TtW5s2aTtrtZ52skIrIkXvksIMjt3BNb9/PcitMUokNYoSOFy1aI9Qw==",
+                                                                   "sha512":  "sha512-Gqold04JsLQD/2hAVIAXvt/2q8H5oXmYAS3CazNNKMrQDfd3J/Syvsu3rjzw17I07LaDaFb3H/AaukDeZB9Vsg==",
                                                                    "path":  "serilog.sinks.kineticseqplugin/1.0.0",
                                                                    "hashPath":  "serilog.sinks.kineticseqplugin.1.0.0.nupkg.sha512"
                                                                },
