@@ -73,9 +73,7 @@ public static class LoggerSinkConfigurationLogLevelModifierExtensions
 {
     public static LoggerConfiguration KineticSeq(this LoggerSinkConfiguration loggerSinkConfiguration, string serverUrl, string apiKey)
     {
-        return LoggerSinkConfiguration.Wrap(loggerSinkConfiguration, sink => new KineticSeqSink(sink), c =>
-        {
-            c.Seq(serverUrl, apiKey: apiKey);
-        }, LevelAlias.Minimum, null);
+        var kineticSeqSink = new KineticSeqSink(new LoggerConfiguration().CreateLogger());
+        return loggerSinkConfiguration.Sink(kineticSeqSink, LevelAlias.Minimum).WriteTo.Seq(serverUrl, apiKey: apiKey);
     }
 }

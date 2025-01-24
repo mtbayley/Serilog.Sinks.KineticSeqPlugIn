@@ -2,7 +2,7 @@ $TempPackagesFolder = Join-Path  $PSScriptRoot "obj\packages"
 $TempPublishFolder = Join-Path  $PSScriptRoot "obj\pub"
 $TargetFolder = Join-Path  $PSScriptRoot "deployment"
 $TargetStoreFolder = Join-Path  $TargetFolder "store"
-$TargetDepsFolder = Join-Path  $TargetFolder "additionalDeps\shared\Microsoft.AspNetCore.App\6.0.0\"
+$TargetDepsFolder = Join-Path  $TargetFolder "additionalDeps\shared\Microsoft.AspNetCore.App\8.0.0\"
 $MsbuildFlags = @("-v", "q", "/nologo");
 
 function RemoveManifestFromDeps ($depsLocation, $depsTarget) {
@@ -38,7 +38,7 @@ Write-Host "Generating Serilog.Sinks.KineticSeqPlugIn package"
 dotnet pack ..\Serilog.Sinks.KineticSeqPlugIn\Serilog.Sinks.KineticSeqPlugIn.csproj -o $TempPackagesFolder $MsbuildFlags
 
 Write-Host "Generating runtime store for Serilog.Sinks.KineticSeqPlugIn at $TargetStoreFolder"
-dotnet store -r win10-x64 -o $TargetStoreFolder --manifest Serilog.Sinks.KineticSeqPlugIn.Store.csproj --skip-optimization $MsbuildFlags
+dotnet store -r win-x64 -o $TargetStoreFolder --manifest Serilog.Sinks.KineticSeqPlugIn.Store.csproj --skip-optimization $MsbuildFlags
 
 Write-Host "Generating additionalDeps for Serilog.Sinks.KineticSeqPlugIn at $TargetDepsFolder"
 dotnet publish Serilog.Sinks.KineticSeqPlugIn.Store.csproj -o $TempPublishFolder $MsbuildFlags
