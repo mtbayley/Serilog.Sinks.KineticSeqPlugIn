@@ -18,10 +18,10 @@
 
 	<ItemGroup>
 		<PackageReference Include="Serilog.Sinks.KineticSeqPlugIn" Version="1.0.0-*" />
-		<!-- This is required to get all Microsoft.AspNetCore.App packages trimmed from the store -->
-		<FrameworkReference Include="Microsoft.AspNetCore.App" Version="8.0.0" IsImplicitlyDefined="true" />
-		<!-- This is required to avoid Microsoft.NETCore.App package getting into the store -->
-		<PackageReference Remove="Microsoft.NETCore.App" />
+		 <!--This is required to get all Microsoft.AspNetCore.App packages trimmed from the store-->
+		<!--<FrameworkReference Include="Microsoft.AspNetCore.App" Version="8.0.0" IsImplicitlyDefined="true" />-->
+		 <!--This is required to avoid Microsoft.NETCore.App package getting into the store-->
+		<!--<PackageReference Remove="Microsoft.NETCore.App" />-->
 	</ItemGroup>
 
 </Project>

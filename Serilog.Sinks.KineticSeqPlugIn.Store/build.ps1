@@ -1,6 +1,6 @@
 $TempPackagesFolder = Join-Path  $PSScriptRoot "obj\packages"
 $TempPublishFolder = Join-Path  $PSScriptRoot "obj\pub"
-$TargetFolder = Join-Path  $PSScriptRoot "deployment"
+$TargetFolder = Join-Path  $PSScriptRoot "..\deployment"
 $TargetStoreFolder = Join-Path  $TargetFolder "store"
 $TargetDepsFolder = Join-Path  $TargetFolder "additionalDeps\shared\Microsoft.AspNetCore.App\8.0.0\"
 $MsbuildFlags = @("-v", "q", "/nologo");
